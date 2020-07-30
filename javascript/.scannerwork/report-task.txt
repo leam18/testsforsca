@@ -1,0 +1,6 @@
+projectKey=Test_for_doc_01
+serverUrl=https://app.sca.teratest.net
+serverVersion=8.4.0.35506
+dashboardUrl=https://app.sca.teratest.net/dashboard?id=Test_for_doc_01
+ceTaskId=AXN3BkSvDtD1CJUsewiJ
+ceTaskUrl=https://app.sca.teratest.net/api/ce/task?id=AXN3BkSvDtD1CJUsewiJ
