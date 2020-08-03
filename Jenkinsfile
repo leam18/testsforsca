@@ -7,5 +7,14 @@ pipeline {
       }
     }
 
+    stage('SCA Scanning') {
+      steps {
+        withSonarQubeEnv('Sonarqube') {
+          waitForQualityGate true
+        }
+
+      }
+    }
+
   }
 }
