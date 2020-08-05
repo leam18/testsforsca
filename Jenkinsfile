@@ -4,7 +4,7 @@ pipeline {
         stage('SCM') {
             steps {
                 step{
-                  git url 'https://github.com/leam18/testsforsca.git'
+                  git 'https://github.com/leam18/testsforsca.git'
                 }
             }
         }
@@ -12,6 +12,7 @@ pipeline {
             steps {
                 step{
                def scannerHome = tool 'SonarQube Scanner 4.3.0.2102';
+                installationName(Sonarqube)
                 withSonarQubeEnv() 
                }
             }
