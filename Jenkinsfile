@@ -11,9 +11,7 @@ pipeline {
         stage('SonarQube analysis') {
             steps {
                 step{
-               def scannerHome = tool 'SonarQube Scanner 4.3.0.2102';
-                installationName(Sonarqube)
-                withSonarQubeEnv() 
+                    sh 'sonar-scanner javascript/'
                }
             }
         }
