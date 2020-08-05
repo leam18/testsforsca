@@ -8,7 +8,7 @@ pipeline {
             }
         stage('SonarQube analysis') {
             steps {
-                    sh 'sonar-scanner javascript/'
+                    sh '/var/jenkins_home/tools/hudson.plugins.sonar.SonarRunnerInstallation/Sonarqube/bin/sonar-scanner javascript/'
                }
             }
         stage("Quality Gate") {
