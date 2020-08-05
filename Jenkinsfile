@@ -1,4 +1,3 @@
-def scannerhome = tool 'sonar-scanner'
 pipeline {
     agent any
     stages {
@@ -10,7 +9,7 @@ pipeline {
         stage('SonarQube analysis') {
             steps{
                 withSonarQubeEnv ('SCA'){
-                sh  "${scannerhome}bin/sonar-scanner javascript/"
+                sh  "/var/jenkins_home/sonar-scanner/sonar-scanner-4.4.0.2170/bin/sonar-scanner javascript/"
                 }
             }
         }
