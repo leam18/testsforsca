@@ -7,10 +7,12 @@ pipeline {
                 }
             }
         stage('SonarQube analysis') {
+            steps{
                     def scannerHome = tool 'SonarScanner 4.0';
                     withSonarQubeEnv('Sonarqube')
                     sh "${scannerHome}/bin/sonar-scanner javascript/"
                }
+        }
         stage("Quality Gate") {
             steps {
                 timeout(time: 1, unit: 'HOURS') {
