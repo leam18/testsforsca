@@ -6,13 +6,11 @@ pipeline {
                   git 'https://github.com/leam18/testsforsca.git'
                 }
             }
-        }
         stage('SonarQube analysis') {
             steps {
                     sh 'sonar-scanner javascript/'
                }
             }
-        }
         stage("Quality Gate") {
             steps {
                 timeout(time: 1, unit: 'HOURS') {
