@@ -1,0 +1,6 @@
+projectKey=pruebausertest
+serverUrl=https://app.sca.teratest.net
+serverVersion=8.4.0.35506
+dashboardUrl=https://app.sca.teratest.net/dashboard?id=pruebausertest
+ceTaskId=AXNeI8ILDtD1CJUsewgv
+ceTaskUrl=https://app.sca.teratest.net/api/ce/task?id=AXNeI8ILDtD1CJUsewgv

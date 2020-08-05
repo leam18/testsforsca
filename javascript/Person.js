@@ -2,7 +2,7 @@ asdasfs-lflkheñwejhn
 var Person = function(first, last, middle) {
     this.first = first;
     this.middle = middle;
-    this.la{lfnskjfasjkharñkfj.ahdnf aerñiukjmst = last;
+    this.last = last;
 };
 
 Person.prototype = {
