@@ -3,14 +3,12 @@ pipeline {
     stages {
         stage('SCM') {
             steps {
-                step{
                   git 'https://github.com/leam18/testsforsca.git'
                 }
             }
         }
         stage('SonarQube analysis') {
             steps {
-                step{
                     sh 'sonar-scanner javascript/'
                }
             }
