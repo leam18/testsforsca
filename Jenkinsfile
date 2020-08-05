@@ -9,7 +9,7 @@ pipeline {
         stage('SonarQube analysis') {
             steps{
                 withSonarQubeEnv ('SCA'){
-                sh  "/var/jenkins_home/sonar-scanner/sonar-scanner-4.4.0.2170/bin/sonar-scanner javascript/"
+                sh  "/var/jenkins_home/sonar-scanner/sonar-scanner-4.4.0.2170/bin/sonar-scanner"
                 }
             }
         }
