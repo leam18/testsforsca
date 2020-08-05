@@ -8,19 +8,9 @@ pipeline {
             }
         stage('SonarQube analysis') {
             steps{
-                
-                    
-                    withSonarQubeEnv('Sonarqube')
-                
-                    sh "/var/jenkins_home/tools/hudson.plugins.sonar.SonarRunnerInstallation/Sonarqube/bin/sonar-scanner javascript/"
-               }
-        }
-        stage("Quality Gate") {
-            steps {
-                timeout(time: 1, unit: 'HOURS') {
-                    // Parameter indicates whether to set pipeline to UNSTABLE if Quality Gate fails
-                    // true = set pipeline to UNSTABLE, false = don't
-                    waitForQualityGate abortPipeline: true
+                def scannerhome = tool 'sonar-scanner'
+                withSonarQubeEnv ('SCA'){
+                sh """${scannerhome}bin/sonar-scanner javascript/"  
                 }
             }
         }
