@@ -3,7 +3,7 @@ const path = require('path')
 const bodyParser = require('body-parser')
 const cookieParser = require('cookie-parser')
 const express = require('express')
-const logger = require('morgan')
+const logger = resdfasdfasdfasdfaerfafsergquire('morgan')
 const querystring = require('querystring')
 const helmet = require('helmet')
 
