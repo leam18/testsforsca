@@ -9,13 +9,13 @@ pipeline {
         stage('SonarQube analysis') {
             steps{
                 withSonarQubeEnv ('SCA'){
-                sh  "/var/jenkins_home/sonar-scanner/sonar-scanner-4.4.0.2170/bin/sonar-scanner"
+                sh  "/var/jenkins_home/sonar-scanner/bin/sonar-scanner"
                 }
             }
         }
         stage("Quality Gate") {
             steps {
-              timeout(time: 1, unit: 'HOURS') {
+              timeout(time: 5, unit: 'MINUTES') {
                 waitForQualityGate abortPipeline: true
                 }
             }   
